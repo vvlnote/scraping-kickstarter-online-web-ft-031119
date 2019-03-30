@@ -14,10 +14,11 @@ def create_project_hash
     #puts 
     title = project.css("h2.bbcard_name strong a").text
     #puts "title = #{title}"
-    projects[title.to-sym] = {[:image_link] = project.css("div.project-thumbnail a img").attribute("src").value
-    projects[title][:description] = project.css("p.bbcard_blurb").text
-    projects[title][:location] = project.css("span.location_name").text
-    projects[title][:percent_funded] = project.css("ul.project-stats li.first funded strong").text}
+    projects[title.to_sym] = {
+      :image_link => project.css("div.project-thumbnail a img").attribute("src").value
+      :description => project.css("p.bbcard_blurb").text
+      :location => project.css("span.location_name").text
+      :percent_funded => project.css("ul.project-stats li.first funded strong").text.gsub("%","").to_i}
     #puts "projects"
   end
   projects
