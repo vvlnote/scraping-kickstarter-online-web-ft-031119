@@ -16,5 +16,4 @@ def create_project_hash
     projects[title][:percent_funded] = project.css("ul.project-stats li.first funded strong").text
   end
   projects
-  end
 end
