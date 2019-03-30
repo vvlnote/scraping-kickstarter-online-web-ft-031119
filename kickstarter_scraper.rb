@@ -8,7 +8,7 @@ def create_project_hash
   #puts "#{kickstarter.css('li.project.grid_4')}"
   projects = {}
   arr = kickstarter.css('li.project.grid_4')
-  #puts "#{arr.length}"
+  #puts "arr = #{arr}"
   arr.each do |project|
     puts "proejct = #{project}"
     puts 
