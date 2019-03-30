@@ -8,7 +8,7 @@ def create_project_hash
   #puts "#{kickstarter.css('li.project.grid_4').length}"
   projects = {}
   arr = kickstarter.css('li.project.grid_4')
-  puts "#{arr.length}"
+  #puts "#{arr.length}"
   arr.each do |project|
     puts "#{project}"
     title = project.css("h2.bbcard_name strong a").text
