@@ -10,7 +10,7 @@ def create_project_hash
   arr = kickstarter.css('li.project.grid_4')
   #puts "#{arr.length}"
   arr.each do |project|
-    puts "#{project}"
+    puts "proejct = #{project}"
     title = project.css("h2.bbcard_name strong a").text
     puts "title = #{title}"
     projects[title][:image_link] = project.css("div.project-thumbnail a img").attribute("src").value
